@@ -1,0 +1,507 @@
+/*
+Theme Name: AAA
+Author: Xuan Huang
+Description: This is a theme for organization Alberta Alliance for Action
+Tags: non-profit
+Version: 1.0
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+body {
+  font-family: arial;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+section {
+  padding: 160px 0;
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 48px;
+  font-weight: 300;
+  color: black;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 36px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+h4 {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #d2ac93;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+h5 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+/* just for footer copyright */
+h6 {
+  color: white;
+  font-size: 16px;
+  font-weight: 100;
+  text-align: center;
+  margin-top: 80px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: black;
+}
+
+.container {
+  max-width: 1400px;
+  width: 95%;
+  margin: 0 auto;
+}
+/* 
+css for homepage */
+
+.btn {
+  color: white;
+  border: 2px white solid;
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 40px;
+  transition: 0.5s;
+  text-transform: capitalize;
+}
+
+.btn:hover {
+  background-color: white;
+  border: 2px white solid;
+  color: black;
+}
+
+/* css for header */
+#burger {
+  display: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 10px 0;
+  transition: 0.5s;
+  z-index: 1000;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-flex ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 25px;
+}
+
+.header-flex a {
+  color: #d2ac93;
+}
+
+.header-flex a:hover {
+  color: white;
+}
+
+.logo img {
+  width: 86px;
+  height: auto;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: darken;
+}
+
+.hero .textbox {
+  padding: 0 240px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero p {
+  color: white;
+}
+
+.about-flex {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.about p {
+  color: black;
+}
+
+.about img {
+  width: 600px;
+  height: 396px;
+}
+
+.btn2 {
+  padding: 10px 30px;
+  text-decoration: none;
+  margin-top: 20px;
+  text-transform: capitalize;
+  border: black 2px solid;
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+.btn2:hover {
+  background-color: transparent;
+  border: black 2px solid;
+  color: black;
+}
+
+.activities {
+  background-color: black;
+}
+
+.activities .text-box {
+  padding: 0 300px;
+  text-align: center;
+}
+
+.activities h2 {
+  color: white;
+}
+
+.activities-grid .card {
+  height: 350px;
+  width: auto;
+  border: 2px black solid;
+  box-shadow: 0 4px 4px 5px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+}
+
+.activities-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.activities-grid .card .overlay {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d2ac93;
+  opacity: 0;
+  transition: 0.5s;
+  padding-top: 30px;
+}
+
+.activities-grid .card:hover {
+  transform: scale(1.05);
+}
+
+.activities-grid .card:hover .overlay {
+  opacity: 0.6;
+}
+
+.activities-grid .btn2 {
+  position: absolute;
+  margin-top: 0px;
+  transform: translateY(120px);
+}
+
+.activities .btn {
+  color: #d2ac93;
+  border: 2px #d2ac93 solid;
+  text-align: center;
+}
+
+.activities .btn:hover {
+  background-color: #d2ac93;
+  border: 2px #d2ac93 solid;
+  text-align: center;
+  color: black;
+}
+
+/* cta css */
+
+.cta {
+  background-color: black;
+}
+
+.cta .btn2 {
+  background-color: #d2ac93;
+  border: 2px #d2ac93 solid;
+  color: black;
+}
+
+.cta .btn2:hover {
+  background-color: transparent;
+  border: 2px #d2ac93 solid;
+  color: #d2ac93;
+}
+
+.cta .text-box {
+  padding: 0 300px;
+  text-align: center;
+}
+
+.cta h2,
+p {
+  color: white;
+}
+
+/* css for the contact section */
+.contact-flex {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-form {
+  width: 50%;
+}
+
+.contact-info p {
+  color: black;
+}
+
+.form-row {
+  width: 100%;
+  margin-bottom: 15px; /* Adds space between rows */
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d2ac93;
+  box-sizing: border-box; /* Ensures padding is inside the width */
+}
+
+textarea {
+  height: 200px; /* Adjust height for textareas */
+}
+
+#submit-btn {
+  font-size: 18px;
+}
+
+/* css for footer */
+footer {
+  background-color: black;
+  padding: 80px 0;
+}
+
+footer ul {
+  color: white;
+  list-style-type: none;
+}
+
+footer ul a {
+  color: white;
+}
+
+footer ul a:hover {
+  color: #d2ac93;
+}
+
+.footer-grid {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the columns */
+  align-items: flex-start;
+}
+
+.footer-col {
+  padding: 0 20px; /* Optional: Add padding if needed */
+}
+
+.footer-col:first-child {
+  width: 50%; /* First column takes 50% of the width */
+}
+
+.footer-col:nth-child(2),
+.footer-col:nth-child(3) {
+  width: 25%; /* Second and third columns each take 25% */
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 640px;
+  height: auto;
+  margin-top: 60px;
+  border-bottom: 1px white solid;
+}
+
+/* page our story css */
+.page-story {
+  background-color: black;
+}
+
+.story-text {
+  padding: 100px 0;
+}
+
+.about-content {
+  display: flex;
+}
+
+.about-page-left {
+  width: 35%;
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  overflow: hidden; /* Full viewport height */
+}
+
+.about-page-left img {
+  height: auto;
+  object-fit: cover; /* Cover the full area without stretching */
+}
+
+.about-page-right {
+  padding: 20px;
+  width: 60%; /* Takes up the remaining space */
+}
+
+.about-content h3,
+h5 {
+  color: white;
+}
+
+.right-text h2 {
+  padding-top: 0;
+  color: white;
+}
+
+.mission-detail {
+  display: none; /* Initially hide the paragraph */
+  padding: 10px 0;
+}
+
+.mission-item {
+  margin-bottom: 20px;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 10px;
+  transition: transform 0.3s;
+  color: #d2ac93;
+  font-size: 30px;
+}
+
+.toggle-btn.active {
+  transform: rotate(45deg); /* Rotate plus to turn into an X */
+}
+
+/* story page value css */
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 20px; /* Space between grid items */
+  margin-top: 40px;
+}
+
+.value-item h3 {
+  font-weight: bold;
+}
+
+.story-partner {
+  height: 100vh;
+  position: relative;
+}
+
+/* css for story page partner */
+.partner-grid {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.partner-grid img {
+  opacity: 50%;
+  width: 100%;
+}
+
+.story-partner {
+  padding-bottom: 500px;
+}
+
+.story-cta .text-box {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.711);
+  padding: 60px 360px;
+}
+
+.story-cta .text-box p {
+  color: black;
+}
