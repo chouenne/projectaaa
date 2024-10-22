@@ -71,8 +71,8 @@ function register_footer_widgets()
       'name' => __('Footer Column 1', 'project-aaa'),
       'id' => 'footer-1',
       'description' => __('Widgets in this area will be displayed in the first column of the footer.', 'project-aaa'),
-      'before_title' => '<h3>', // HTML for widget title
-      'after_title' => '</h3>',
+      'before_title' => '<h4>', // HTML for widget title
+      'after_title' => '</h4>',
     )
   );
 
@@ -80,16 +80,16 @@ function register_footer_widgets()
     'name' => __('Footer Column 2', 'project-aaa'),
     'id' => 'footer-2',
     'description' => __('Widgets in this area will be displayed in the second column of the footer.', 'project-aaa'),
-    'before_title' => '<h3>',
-    'after_title' => '</h3>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
   ));
 
   register_sidebar(array(
     'name' => __('Footer Column 3', 'project-aaa'),
     'id' => 'footer-3',
     'description' => __('Widgets in this area will be displayed in the third column of the footer.', 'project-aaa'),
-    'before_title' => '<h3>',
-    'after_title' => '</h3>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>',
   ));
 }
 
